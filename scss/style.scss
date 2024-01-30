@@ -1,0 +1,201 @@
+@import 'global';
+@import 'header';
+.hello {
+    margin-top: 30px;
+    margin-bottom: 300px;
+    color: #F8FCFF;
+    position: relative;
+    &__inner {
+        padding-top: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 52px;
+        margin-bottom: 30px;
+    }
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__list-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        cursor: pointer;
+        transition: all .4s;
+    }
+    &__list-item:hover {
+        color:#1D6FB6;
+    }
+    &__list-item:hover path {
+        fill: #1D6FB6;
+    }
+    &__list-item-text {
+        font-size: 24px;
+    }
+    &__list-item:last-child {
+        margin-bottom: 40px;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 18px;
+        border-radius: 100px;
+        color: #1D6FB6;
+        background: #D0DCE7;
+        width: 100%;
+        margin-bottom: 120px;
+        height: 56px;
+        max-width: 288px;
+        transition: all .4s;
+    }
+    &__button:hover {
+        background: #83ADD3;
+        color: #F8FCFF;
+    }
+    &__video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+        opacity: 0.6;
+    }
+}
+.products__wraper {
+    display: flex;
+    gap: 10px;
+}
+.sidebar  {
+    display: inline-block;
+    position:sticky;
+    padding: 30px 108px 840px 30px;
+    border: 2px solid #D0DCE7;
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    gap: 24px;
+    font-weight: 500;
+    color: #F8FCFF;
+}
+
+.gallery__img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 100%;
+}
+
+.gallery__img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery__img--large-left {
+    grid-column: 1/3;
+    grid-row: span 2;
+}
+
+.gallery__img--large-right {
+    grid-column: -1/-3;
+    grid-row: span 2;
+}
+.gallery__hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1D6FB6B2;
+    height: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.gallery__img:hover .gallery__hint {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.gallery__img--large-left .gallery__hint,
+.gallery__img--large-right .gallery__hint {
+    height: 103px;
+    font-size: 24px;
+    line-height: 29px;
+}
+.products {
+    margin-top: 120px;
+    margin-bottom: 120px;
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 24px;
+    }
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 30px;
+    &__img img {
+        width: 100%;
+    }
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 18px;
+        border-radius: 100px;
+        color: #1D6FB6;
+        background: #D0DCE7;
+        width: 100%;
+        height: 56px;
+        max-width: 288px;
+        transition: all .4s;
+    }
+    &__button:hover {
+        background: #83ADD3;
+        color: #F8FCFF;
+    }
+    &__action {
+        position: absolute;
+        top: 30px;
+        font-weight: 500;
+        max-width: 130px;
+        background-color: #F8FCFF;
+        border-radius: 0px 100px 100px 0px;
+        padding: 30px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1D6FB6;
+        cursor: pointer;
+    }
+}
+@import 'footer';
+
+
+
+

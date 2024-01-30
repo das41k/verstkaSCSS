@@ -1,0 +1,22 @@
+.header {
+    padding: 30px 0px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        max-width: 54px;
+    }
+}   
+.nav {
+    &__list {
+        display: flex;
+        gap: 30px;
+    }
+}
+.socials {
+    display: flex;
+    gap: 30px;
+}
+
+

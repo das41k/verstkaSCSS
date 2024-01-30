@@ -1,0 +1,12 @@
+@import 'varsMixinShable';
+body {
+    background-color: $bg-global;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: $text-global;
+}
+.container {
+    max-width: 1230px;
+    margin: 0px auto;
+    padding: 0 15px;
+    height: 100%;
+}
